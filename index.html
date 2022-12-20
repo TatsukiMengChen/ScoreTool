@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>小组积分工具</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.growl.css">
+    <link rel="stylesheet" type="text/css" href="css/ripple.css">
+</head>
+
+<body>
+    <div id="navbar">
+    	<div id="score-mode" class="ripple">积分</div>
+    	<div id="analyse-mode" class="ripple">统计</div>
+        <div id="fix-mode" class="ripple">修正</div>
+        <div id="task-mode" class="ripple">任务</div>
+        <div id="export-json" class="ripple">导出JSON</div>
+        <div id="export-excle" class="ripple">导出Excle</div>
+    </div>
+    <div id="preview">
+        <h3>积分总览</h3>
+        <div id="infos">
+            <div>
+                <div class="info">组名：
+                    <div class="keyword" id="pre-group-name">第1组</div>
+                </div>
+                <div class="info">小组总分：
+                    <div class="keyword" id="pre-group-score">66</div>
+                </div>
+            </div>
+            <div>
+                <div class="info">姓名：
+                    <div class="keyword" id="pre-student-name">张三</div>
+                </div>
+                <div class="info">座号：
+                    <div class="keyword" id="pre-student-number">1</div>
+                </div>
+            </div>
+            <div>
+                <div class="info">个人积分：
+                    <div class="keyword" id="pre-student-score">6</div>
+                </div>
+                <div class="info">加分：
+                    <div class="keyword" id="pre-student-add">9</div>
+                </div>
+                <div class="info">扣分：
+                    <div class="keyword" id="pre-student-sub">3</div>
+                </div>
+            </div>
+        </div>
+        <h3>积分详细</h3>
+        <div id="tab">
+            <table cellspacing="0" id="table" class="table-bordered table-hover">
+                <tr>
+                    <th>座号</th>
+                    <th>姓名</th>
+                    <th>积分</th>
+                    <th>类型</th>
+                    <th>描述</th>
+                    <th>日期</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="groups"></div>
+    <div id="analyse"></div>
+    <div id="fix"></div>
+    <div id="task"></div>
+    <div id="edit">
+        <div class="edit">积分：
+            <div id="edit-score" class="ripple">0</div>
+        </div>
+        <div class="edit">类型：
+            <div id="edit-type" class="ripple">无</div>
+        </div>
+        <div class="edit">描述：
+            <div id="edit-desc" class="ripple">无</div>
+        </div>
+        <div class="edit">
+        <div class="ripple" id="submit">提交</div>
+        <div class="ripple" id="fix-submit">修改</div>
+        <div class="ripple" id="task-submit">安排</div>
+    </div>
+    </div>
+    <div id="num-tab">
+        <div>
+            <div class="key ripple">1</div>
+            <div class="key ripple">2</div>
+            <div class="key ripple">3</div>
+            <div class="key_func ripple" id="delete">✘</div>
+        </div>
+        <div>
+            <div class="key ripple">4</div>
+            <div class="key ripple">5</div>
+            <div class="key ripple">6</div>
+        </div>
+        <div>
+            <div class="key ripple">7</div>
+            <div class="key ripple">8</div>
+            <div class="key ripple">9</div>
+        </div>
+        <div>
+            <div class="key ripple">.</div>
+            <div class="key ripple">0</div>
+            <div class="key ripple">-</div>
+            <div class="key_func ripple" id="enter">✔</div>
+        </div>
+    </div>
+    <div id="type-tab"></div>
+    <div id="desc-tab"></div>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/jquery.growl.js"></script>
+    <script type="text/javascript" src="js/download.js"></script>
+</body>
+
+</html>
