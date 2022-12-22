@@ -168,7 +168,17 @@ info = { group: 0, group_score: 0, name: "张三", number: 0, score: 0, add: 0, 
 temp_logs = []
 logs = JSON.parse(localStorage.getItem("GroupScore.Logs"));
 if (logs == null) {
-    logs = []
+    logs = [{
+		"update": "20221222",
+		"title": "寒假小组积分",
+		"time": 3,
+		"group": -1,
+		"number": -1,
+		"score": 0,
+		"type": "",
+		"desc": "",
+		"date": ""
+	}]
 }
 backup_logs = logs.concat()
 tasks = JSON.parse(localStorage.getItem("GroupScore.Tasks"));
